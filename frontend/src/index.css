@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --soc-bg: #f6f8fa;
+    --soc-card: #ffffff;
+    --soc-card-hover: #f3f5f8;
+    --soc-border: #d0d7de;
+    --soc-border-subtle: #e6ebf1;
+    --soc-text: #1f2328;
+    --soc-text-secondary: #57606a;
+    --soc-text-muted: #8c959f;
+    --soc-primary: #0969da;
+    --soc-primary-hover: #0860ca;
+    --soc-success: #1a7f37;
+    --soc-warning: #9a6700;
+    --soc-critical: #cf222e;
+    --soc-info: #0969da;
+    color-scheme: light;
+  }
+
+  .dark {
+    --soc-bg: #0b0e14;
+    --soc-card: #12161f;
+    --soc-card-hover: #181d28;
+    --soc-border: #1f2633;
+    --soc-border-subtle: #161b24;
+    --soc-text: #e6edf3;
+    --soc-text-secondary: #8b949e;
+    --soc-text-muted: #6e7681;
+    --soc-primary: #2f81f7;
+    --soc-primary-hover: #388bfd;
+    --soc-success: #2ea043;
+    --soc-warning: #d29922;
+    --soc-critical: #f85149;
+    --soc-info: #58a6ff;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--soc-bg);
+    color: var(--soc-text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom crisp technical scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--soc-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--soc-border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--soc-text-muted);
+}
+
+.mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-feature-settings: 'zero' 1;
+}
+
+/* Subtle transitions for theme switching and interactive elements */
+* {
+  border-color: var(--soc-border);
+}

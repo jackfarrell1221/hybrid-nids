@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "timestamp": "2026-10-09T17:10:23.201034+00:00",
+    "total_samples": 2,
+    "has_ground_truth": true
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "accuracy": 1.0,
+    "avg_latency_ms": 59.146
+  },
+  "confusion_matrix": {
+    "labels": [
+      "NORMAL",
+      "INTRUSION"
+    ],
+    "matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  "classification_report": {
+    "NORMAL": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "INTRUSION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 1.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    }
+  },
+  "attack_distribution": {
+    "PORT_SCAN": 1
+  },
+  "counts": {
+    "total": 2,
+    "normal_predicted": 1,
+    "intrusion_predicted": 1,
+    "rule_detections": 1,
+    "ml_detections": 1
+  },
+  "predictions": [
+    {
+      "id": 1,
+      "duration": 5.0,
+      "src_bytes": 900.0,
+      "dst_bytes": 700.0,
+      "status": "NORMAL",
+      "detection_method": "RANDOM_FOREST",
+      "attack_type": null,
+      "severity": "LOW",
+      "latency_ms": 112.516,
+      "message": "Traffic classified as normal by Random Forest. Anomaly score: 0.0000.",
+      "ground_truth": "NORMAL",
+      "correct": true
+    },
+    {
+      "id": 2,
+      "duration": 0.3,
+      "src_bytes": 40.0,
+      "dst_bytes": 20.0,
+      "status": "INTRUSION",
+      "detection_method": "RULE",
+      "attack_type": "PORT_SCAN",
+      "severity": "HIGH",
+      "latency_ms": 5.775,
+      "message": "Detected by PORT_SCAN rule because the connection duration (0.30s) was below 1.0s and both source bytes (40) and destination bytes (20) were below the configured threshold of 100.0 bytes.",
+      "ground_truth": "INTRUSION",
+      "correct": true
+    }
+  ]
+}

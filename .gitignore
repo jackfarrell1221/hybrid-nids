@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.venv/
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# Data & models (large binary files)
+data/nids.db
+models/isoforest_model.joblib
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
